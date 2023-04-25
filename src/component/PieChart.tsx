@@ -5,7 +5,7 @@ import {
   Legend,
   ChartOptions,
 } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
+import { Chart } from "react-chartjs-2";
 
 import * as _ from "lodash";
 
@@ -47,7 +47,8 @@ const PieChart: React.FC<cardProps> = ({ firstData, addData }) => {
   };
   return (
     <div className='pie-container'>
-      <Doughnut data={data} options={options} />
+      <Chart type='doughnut' data={data} options={options} />
+      {/* <Doughnut data={data} options={options} /> */}
     </div>
   );
 };
