@@ -92,9 +92,9 @@ const LineChart: React.FC<pageProps> = ({ date, title, number, apiData }) => {
 
   const label = apiData?.views;
   const columns = _.valuesIn(label);
-  const arr = label && Object.keys(label)
+  const arr = label && Object.keys(label);
 
-  const [chartData, setChartData] = useState<ChartData<"line">>({
+  const [chartData, setChartData] = useState<ChartData<"bar">>({
     datasets: [],
   });
 

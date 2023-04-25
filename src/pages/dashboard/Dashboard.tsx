@@ -4,7 +4,6 @@ import { classNames } from "../../utils/classname";
 import LineChart from "../../component/LineChart";
 import PieChart from "../../component/PieChart";
 import axios from "axios";
-import { DocumentArrowDownIcon } from "@heroicons/react/24/outline";
 import { location, sources } from "../../assets/data";
 
 const url = "https://fe-task-api.mainstack.io/";
