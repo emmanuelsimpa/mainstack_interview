@@ -4,12 +4,13 @@ import {
   Tooltip,
   Legend,
   ChartOptions,
+  DoughnutController,
 } from "chart.js";
 import { Chart } from "react-chartjs-2";
 
 import * as _ from "lodash";
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(ArcElement, DoughnutController, Tooltip, Legend);
 
 const options: ChartOptions = {
   responsive: true,
