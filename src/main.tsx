@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { router } from "./App";
 import "./index.css";
 import "animate.css";
-import "./fonts/Söhne-Font-Family-Collection/Test Söhne/TestSöhne-Buch.otf";
+import "./fonts/sohne-Font/TestSöhne-Buch.otf";
 // import "./fonts/Söhne-Font-Family-Collection/Test Söhne/TestSöhne-Buch.otf";
 import { RouterProvider } from "react-router-dom";
 
