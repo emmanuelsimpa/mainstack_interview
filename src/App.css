@@ -1,0 +1,13 @@
+.font-face-gm {
+    font-family: "Söhne";
+    line-height: 24px;
+    letter-spacing: 1.5;
+    font-size: medium;
+}
+
+.pie-container {
+    height: 10rem;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+}

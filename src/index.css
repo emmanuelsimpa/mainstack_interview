@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Söhne";
+    src: local("Söhne"),
+     url("./fonts/Söhne-Font-Family-Collection/Test Söhne/TestSöhne-Buch.otf") format("truetype");
+    }
