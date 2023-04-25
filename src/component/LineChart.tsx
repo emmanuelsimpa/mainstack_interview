@@ -12,7 +12,7 @@ import {
   ChartArea,
   ChartData,
   ChartOptions,
-   LineController,
+  LineController,
 } from "chart.js";
 
 import { Chart } from "react-chartjs-2";
@@ -24,7 +24,7 @@ ChartJS.register(
   PointElement,
   LineElement,
   LineController,
-  // ChartConfiguration, 
+  // ChartConfiguration,
   Title,
   Tooltip,
   Legend,
@@ -72,11 +72,8 @@ const options: ChartOptions = {
   },
 };
 
-const datas = [1, 3, 3, 7, 8, 5, 20, 50, 100, 2];
-
 function createGradient(ctx: CanvasRenderingContext2D, area: ChartArea) {
   const gradient = ctx.createLinearGradient(0, area.bottom, 0, area.top);
-
   gradient.addColorStop(0, "rgba(255, 84, 3, 0)");
   gradient.addColorStop(1, "rgba(255, 84, 3, 0.3)");
 
@@ -109,6 +106,7 @@ const LineChart: React.FC<pageProps> = ({ date, title, number, apiData }) => {
         data: columns,
         tension: 0.4,
         pointRadius: 0,
+        fill: "start",
         //   pointHoverRadius: 1,
       },
     ],
@@ -127,7 +125,6 @@ const LineChart: React.FC<pageProps> = ({ date, title, number, apiData }) => {
         ...dataset,
         backgroundColor: createGradient(chart.ctx, chart.chartArea),
         borderColor: "#FF5403",
-        fill: "start",
       })),
     };
 
