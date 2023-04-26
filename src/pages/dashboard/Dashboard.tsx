@@ -8,7 +8,6 @@ import { location, sources } from "../../assets/data";
 
 const url = "https://fe-task-api.mainstack.io/";
 
-
 const DashboardView: React.FC = () => {
   const [date, setDate] = useState<string>("All Time");
   const [data, setData] = useState<any>();
@@ -35,16 +34,12 @@ const DashboardView: React.FC = () => {
   }, []);
 
   const myDate = new Date();
-    const hours= myDate.getHours();
-    let greet;
+  const hours = myDate.getHours();
+  let greet;
 
-    if (hours < 12)
-        greet =  "Good Morning, Blessing.";
-    else if (hours >= 12 && hours <= 17)
-        greet = "Good Afternoon, Blessing.";
-    else if (hours >= 17 && hours <= 24)
-        greet = "Good Evening, Blessing.";
-
+  if (hours < 12) greet = "Good Morning, Blessing.";
+  else if (hours >= 12 && hours <= 17) greet = "Good Afternoon, Blessing.";
+  else if (hours >= 17 && hours <= 24) greet = "Good Evening, Blessing.";
 
   return (
     <PageHeader
@@ -114,7 +109,7 @@ const DashboardView: React.FC = () => {
             <p
               onClick={handleDate}
               className={classNames(
-                date === "1 Day"
+                date === "Custom date"
                   ? "bg-orange-100 border-solid border-2 border-orange rounded-3xl justify-center py-5 px-5 "
                   : "hover:scale-110",
                 "flex items-center h-full cursor-default"
@@ -124,13 +119,18 @@ const DashboardView: React.FC = () => {
             </p>
           </div>
           <div className=''>
-            <LineChart date={date} title='Page Views' number='500' apiData={data?.graph_data}/>
+            <LineChart
+              date={date}
+              title='Page Views'
+              number='500'
+              apiData={data?.graph_data}
+            />
           </div>
           <div className='flex flex-col justify-between gap-16 pt-10 sm:flex-row w-full'>
             {data && (
               <CardDiv
-              title="Top Locations"
-              subtitle="View full reports"
+                title='Top Locations'
+                subtitle='View full reports'
                 firstData={data?.top_locations}
                 addData={location}
                 children={
@@ -143,8 +143,8 @@ const DashboardView: React.FC = () => {
             )}
             {data && (
               <CardDiv
-              title="Top Referral source"
-              subtitle="View full reports"
+                title='Top Referral source'
+                subtitle='View full reports'
                 firstData={data?.top_sources}
                 addData={sources}
                 children={
